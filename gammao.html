@@ -55,48 +55,48 @@
         <section class="py-5">
             <div class="container my-auto">
                 <div class="row justify-content-start">
-                    In today's time, building the mesh is still the major bottleneck of industrial simulations. <br />
+                    Today, building the mesh is still the major bottleneck of industrial simulations. <br />
                     <ul>
                         
                     </ul>
-                    <li>Structured meshes were the preferred technique to align mesh lines and physics, especially on the boundary layer. However, the time needed to define the mesh can be considerable, and the procedure is not dedicated to very complex geometry. Of course, the mesh quality depends strongly on the capability to anticipate physics and on the way hexahedral blocks map the computational domain. <br />
+                    <li>Structured meshes were the preferred technique to align mesh lines and physics, especially in the boundary layer. However, the time needed to define the mesh can be considerable, and the procedure is not suited to very complex geometries. Of course, the mesh quality depends strongly on the capability to anticipate physics and on the way hexahedral blocks map the computational domain. <br />
                     </li>
                     <ul>
                         
                     </ul>
-                    <li>Unstructured grids generally contain elements with privileged directions (hexahedrons and prisms) near the wall, with refinement in the direction normal to the wall. Tetrahedrons are located around a complex geometry or far from walls, while pyramids can be introduced to link hexahedrons and tetrahedrons. The hybrid grids required expertise to force the mesh generator to cope with one’s constraints. The final mesh anticipates physics; any mistake requires a full mesh generation. <br />
+                    <li>Unstructured grids generally contain elements with privileged directions (hexahedra and prisms) near the wall, with refinement in the direction normal to the wall. Tetrahedra are located around complex geometries or far from walls, while pyramids can be introduced to link hexahedra and tetrahedra. Hybrid grids require expertise to force the mesh generator to cope with one's constraints. The final mesh anticipates physics; any mistake requires regenerating the whole mesh. <br />
                     </li>
                     <ul>
                         
                     </ul>
-                    Reading those lines convinces us that the mesh generation process is the most difficult aspect of simulations since the accuracy and the capability to capture physics depend on it. The human experience remains too present, avoiding any automaticity in the process. <br />
+                    Reading those lines convinces us that the mesh generation process is the most difficult aspect of simulations since the accuracy and the capability to capture physics depend on it. Human expertise still plays too large a role, preventing full automation of the process. <br />
                     <ul>
                         
                     </ul>
-                    GammaO is a joint team between ONERA and Inria dedicated to the mesh adaptation procedure using simplexes (triangles in 2D and tetrahedrons in 3D). The idea is to start from a coarse grid and to converge at the same time the mesh and the solution. To do so, it is mandatory to introduce a remesher that can adapt the mesh to physics using a sensor. One strength of GammaO lies in the expertise of its researchers on the remesher itself, but also the whole computational loop, including CFD, interpolation, error estimate, and adjoint problem. <br />
+                    GammaO is a joint team between ONERA and Inria dedicated to the mesh adaptation procedure using simplices (triangles in 2D and tetrahedra in 3D). The idea is to start from a coarse grid and to converge the mesh and the solution simultaneously. To do so, it is mandatory to introduce a remesher that can adapt the mesh to physics using a sensor. One strength of GammaO lies in the expertise of its researchers not only on the remesher itself but also on the whole computational loop, including CFD, interpolation, error estimation, and adjoint problems. <br />
                     <ul>
                         
                     </ul>
-                    GammaO is based on strong cooperation between the teams, with the help of their companies. Several topics are addressed.</br>
+                    GammaO is based on strong cooperation between the teams, with the support of their institutions. Several topics are addressed.</br>
 
 
                    <div class="row">
-                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Mixed-Volume Element discretization</p></span></h4>
+                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Mixed-Element-Volume discretization</p></span></h4>
 
                             <div class="text-justify">
-                            Anisotropic meshes require robust schemes, especially when the element’s anisotropy can be about one million. Moreover, it is interesting to define the degrees of freedom and the sensors for mesh adaptation at the same location. In practice, both are at mesh nodes.  <br />
+                            Anisotropic meshes require robust schemes, especially when the element anisotropy ratio can reach one million. Moreover, it is interesting to define the degrees of freedom and the sensors for mesh adaptation at the same location. In practice, both are at mesh nodes.  <br />
                             <ul>
                         
                             </ul>
-                            The finite volume formulation requires the definition of the control volumes around mesh nodes, leading to node-centred discretisation. For convection, our robust scheme was proposed by A. Dervieux (and coauthors) under the naming V4 scheme. It uses a dedicated MUSCL reconstruction with a combination of upwind and centred gradients and a dedicated slope limiter. Diffusion terms are computed using the Finite Element approximation using the gradients of the shape functions. Source terms require gradients at mesh nodes estimated using Clément’s scheme. The full discretisation is called the mixed-volume element approach. <br />
+                            The finite volume formulation requires the definition of the control volumes around mesh nodes, leading to a node-centered discretization. For convection, our robust scheme was proposed by A. Dervieux (and coauthors) under the name "V4 scheme". It uses a dedicated MUSCL reconstruction with a combination of upwind and centered gradients and a dedicated slope limiter. Diffusion terms are computed with a Finite Element approximation based on the gradients of the shape functions. Source terms require gradients at mesh nodes estimated using Clément's scheme. The full discretization is called the Mixed-Element-Volume (MEV) approach. <br />
 
-                            <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> G. Barreau (ONERA/DPHY), Y. Gorschka (Safran Tech), F. Pechereau (ONERA/DPHY), F. Tholin (ONERA/DPHY), C. Tarsia-Morisco (Inria/GammaO),  F. Alauzet (Inria/GammaO), J. Vanharen (Inria/GammaO), A. Remigi (Safran Tech), B. Maugars (DAAA/CLEF), C. Content (DAAA/CLEF). </p>
+                            <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> G. Barreau (ONERA/DPHY), Y. Gorschka (Safran Tech), F. Pechereau (ONERA/DPHY), F. Tholin (ONERA/DPHY), C. Tarsia-Morisco (Inria/GammaO), F. Alauzet (Inria/GammaO), J. Vanharen (Inria/GammaO), A. Remigi (Safran Tech), B. Maugars (DAAA/CLEF), C. Content (DAAA/CLEF). </p>
                         </p>
 
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Error estimate</p></span></h4>
 
                             <div class="text-justify">
-                            The error estimate is one root of the process. It should be based on unknowns, leading to the feature-based adaptation. Or it should require the solutions of direct and adjoint problems, leading to the goal-oriented procedure. We work on both approaches. </br>
+                            The error estimate is at the core of the process. It can be based on the solution itself, leading to feature-based adaptation, or on the solutions of the direct and adjoint problems, leading to goal-oriented adaptation. We work on both approaches. </br>
                             
                             <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> V. Golliet (ONERA/DMPE), F. Pechereau (ONERA/DPHY), 
                             F. Alauzet (Inria/GammaO), A. Remigi (Safran Tech) and PhD students from Inria.</p>
@@ -106,7 +106,7 @@
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">New applications</p></span></h4>
 
                             <div class="text-justify">
-                            One of my objectives for GammaO is to promote the technology for multiphysics (reentry, arc lightning with ONERA/DPHY or turbomachinery with Safran Tech and ONERA/DAAA). Reentry is a class of flows never tested before. Hypersonic flows are characterised by strong 3D shocks, whose location depends on inflow conditions. In addition, capturing the boundary layer, especially the wall heat flux, is the main objective since heat is transferred to the wall. Our strategy is based on simplexes (triangles and tetrahedrons) in the boundary layer, which contradicts the literature for which prisms or hexahedrons must be preferred. The strength of our method is the capability to add nodes exactly where they are needed and to coarsen the mesh elsewhere. A strong mathematical environment drives everything, and the whole theoretical background explains the quality of our results.</br>
+                            One of my objectives for GammaO is to promote the technology for multiphysics (reentry, lightning arcs with ONERA/DPHY or turbomachinery with Safran Tech and ONERA/DAAA). Reentry flows had never been addressed with this approach before. Hypersonic flows are characterized by strong 3D shocks, whose location depends on inflow conditions. In addition, capturing the boundary layer, especially the wall heat flux, is the main objective since heat is transferred to the wall. Our strategy is based on simplices (triangles and tetrahedra) in the boundary layer, which goes against the common practice in the literature, where prisms or hexahedra are preferred. The strength of our method is the capability to add nodes exactly where they are needed and to coarsen the mesh elsewhere. A strong mathematical environment drives everything, and the whole theoretical background explains the quality of our results.</br>
                             
                             <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> V. Golliet (ONERA/DMPE), F. Pechereau (ONERA/DPHY), 
                             F. Alauzet (Inria/GammaO), A. Remigi (Safran Tech) and PhD students from Inria.</p>

@@ -9,12 +9,12 @@
                                     Guillaume Puigt, 
                                     ONERA,
                                     Computational Fluid Dynamics, CFD,
-                                    Finite Volume, Finite Element, SPectral method, 
+                                    Finite Volume, Finite Element, Spectral method, 
                                     turbulence, RANS, LES, DNS, 
                                     convection,
                                     diffusion,
                                     reacting flow,
-                                    mesh adaptation, INRIA, Gamma" />
+                                    mesh adaptation, Inria, Gamma" />
         <title>Guillaume Puigt - Professional Homepage</title>
 
         <!-- Favicon-->
@@ -59,8 +59,8 @@
                     <div class="row">
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Introduction</p></span></h4>
                             <div class="col-md-12">
-                            Despite many efforts during the past decades, the development of high-order Finite Volume schemes for unstructured grids remains limited by the requirement to compute several stencils, starting with a pure-centered formulation. Indeed, for a high-order polynomial approximation, the first step consists in computing the polynomial coefficients from the set of conservative variables -we generally call this step deconvolution-. In practice, the stencils to compute must contain as many cells as the number of monomials and generally, the number of cells is larger, leading to the definition of coefficients by solving a least-square system.<br />
-                            An alternative approach considers directly the polynomials per cell, introducing as many degrees of freedom as the number of monomials in the cell. The stencil is now compact by nature (only one cell is required) but the standard Finite Volume formulation must be revisited. Among the possible methods, the famous one is the Discontinuous Galerkin formulation but we are interested here in an alternative framework called the spectral difference method.<br />
+                            Despite many efforts during the past decades, the development of high-order Finite Volume schemes for unstructured grids remains limited by the requirement to compute several stencils, starting with a pure-centered formulation. Indeed, for a high-order polynomial approximation, the first step consists of computing the polynomial coefficients from the set of conservative variables (a step generally called deconvolution). In practice, each stencil must contain at least as many cells as there are monomials; in practice, it contains more, and the coefficients are obtained by solving a least-squares system.<br />
+                            An alternative approach directly considers one polynomial per cell, introducing as many degrees of freedom as the number of monomials in the cell. The stencil is now compact by nature (only one cell is required), but the standard Finite Volume formulation must be revisited. Among the possible methods, the best known is the Discontinuous Galerkin formulation, but we focus here on an alternative framework called the spectral difference method.<br />
                             </div>
                         </p>
 
@@ -68,7 +68,7 @@
                     <div class="row">
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">The spectral difference method</p></span></h4>
                             <div class="col-md-12">
-                                The Spectral Difference (SD) method assumes that the unknowns are represented by a polynomial of degree <i>n</i>. By the nature of the hyperbolic equation, the flux divergence must be a polynomial of degree <i>n</i> and the flux is, therefore, a kind of primitive of the flux divergence. The principle in 1D is therefore to define the flux as a polynomial of degree <i>n+1</i> for consistency. The goal is not to enter into all details here, but an interested reader can download many master thesis referenced below.
+                                The Spectral Difference (SD) method assumes that the unknowns are represented by a polynomial of degree <i>n</i>. By the nature of hyperbolic equations, the flux divergence must be a polynomial of degree <i>n</i> and the flux is a kind of primitive of the flux divergence. In 1D, the flux is thus defined as a polynomial of degree <i>n+1</i> for consistency. We do not go into details here; interested readers can download the Master's theses listed below.
                             </div>
                         </p>
                     </div>
@@ -76,11 +76,11 @@
                     <div class="row">
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Extensions of the spectral difference method</p></span></h4>
                             <div class="col-md-12">
-                                The Spectral Difference (SD) method is well-defined for tensorial rule elements (product of 1D approximation per direction). Extending the approach to other types of elements than rectangles and hexahedrons is not obvious and required much efforts. Taking into account chemistry effects and shock-capturing is a flaw that requires scientific efforts:<br />
+                                The Spectral Difference (SD) method is well defined for tensor-product elements (a product of 1D approximations in each direction). Extending it to elements other than quadrilaterals and hexahedra is not straightforward and required considerable effort. Accounting for chemistry and capturing shocks also required dedicated research:<br />
                                 <ul>
-                                    <li>We worked on the extension to triangles, tetrahedrons, and prisms during the Ph.D. of Adèle Veilleux, leading to two papers.</li>
-                                    <li>The extension to reactive flows was initiated during the internships of Valentin Joncquières and was continued during the Ph.D. of Thomas Marchal under the supervision of Bénédicte Cuenot and Hugues Deniau.</li>
-                                    <li>Accounting for any discontinuity is performed by joint work between Hugues Deniau, Thomas Marchal, and myself on entropy stable schemes.</li>
+                                    <li>We worked on the extension to triangles, tetrahedra, and prisms during the Ph.D. of Adèle Veilleux, leading to two papers.</li>
+                                    <li>The extension to reactive flows was initiated during the internship of Valentin Joncquières and continued during the Ph.D. of Thomas Marchal under the supervision of Bénédicte Cuenot and Hugues Deniau.</li>
+                                    <li>Discontinuities are handled through joint work between Hugues Deniau, Thomas Marchal, and myself on entropy-stable schemes.</li>
                                 </ul>
                             </div>
                         </p>
@@ -92,7 +92,7 @@
                                 <ul>
                                     <li>The internal project called JEROBOAM is dedicated to the use of advanced discontinuous spectral approaches for reactive flows.</li>
                                     <li>The internal project called COCOTTES is dedicated to combustion in supersonic conditions.</li>
-                                    <li>The LMA2S (ONERA's Applied Math Lab) is involved in the Ph.D. thesis of Valentin Ritzenthaler on the use of the Spectral Difference method for Maxwell's equation.</li>
+                                    <li>The LMA2S (ONERA's Applied Math Lab) was involved in the Ph.D. thesis of Valentin Ritzenthaler on the use of the Spectral Difference method for Maxwell's equations.</li>
                                 </ul>
                             </div>
                         </p>
@@ -104,11 +104,11 @@
                             <ul>
                                 <li><p class="text-justify">S. Hirsch, A new spectral difference formulation compatible with shocks, MSc thesis, ENSTA and ONERA, 2021. Co-advised with H. Deniau.</p></li>
 
-                                <li><p class="text-justify">F. Bousquet, Application of Spectral Difference Method for a multi-species reactive flow on high-order and unstructured mesh, MSc thesis, ISAE-ENSMA and ONERA, 2020. Co-advised with H. Deniau.</p></li>
+                                <li><p class="text-justify">F. Bousquet, Application of Spectral Difference method for a multi-species reactive flow on high-order and unstructured mesh, MSc thesis, ISAE-ENSMA and ONERA, 2020. Co-advised with H. Deniau.</p></li>
 
                                 <li><p class="text-justify">P. Van Maris, Extension of a discontinuous spectral approach to reactive Navier-Stokes equations including shocks, MSc thesis, ENSEEIHT and ONERA, 2019.<br /></p></li>
 
-                                <li><p class="text-justify">T. Marchal,  <a href="https://cerfacs.fr/wp-content/uploads/2018/11/CFD_MARCHAL_RAP3A-2018.pdf" target="_blank">Study and implementation of implicit time integration methods in a high-order CFD code</a>, MSc thesis, ENSEEIHT and Cerfacs, 2018.<br /></p></li>
+                                <li><p class="text-justify">T. Marchal, <a href="https://cerfacs.fr/wp-content/uploads/2018/11/CFD_MARCHAL_RAP3A-2018.pdf" target="_blank">Study and implementation of implicit time integration methods in a high-order CFD code</a>, MSc thesis, ENSEEIHT and CERFACS, 2018.<br /></p></li>
 
                                 <li><p class="text-justify">N. Gindrier, <a href="https://cerfacs.fr/wp-content/uploads/2018/09/CFD_Gindrier_FinalReport_JAGUAR.pdf" target="_blank">Développement d'une méthode de suivi lagrangien de particules dans un code CFD d'ordre élevé pour la LES</a>, MSc thesis, ENSIMAG and CERFACS, 2018.<br /></p></li>
 
@@ -118,21 +118,21 @@
 
                                 <li><p class="text-justify">V. Joncquieres, <a href="http://cerfacs.fr/wp-content/uploads/2015/10/MasterThesis_Joncquieres.pdf" target="_blank">Extension of JAGUAR to combustion</a>, MSc thesis, ENSEEIHT and CERFACS, 2015.<br /></p></li>
 
-                                <li><p class="text-justify">W. Hamri, <a href="http://cerfacs.fr/wp-content/uploads/2015/10/Report_WHamri.pdf" target="_blank">Evaluation of the JAGUAR solver</a>, first master year period, ENSEEIHT and CERFACS, 2015.<br /></p></li>
+                                <li><p class="text-justify">W. Hamri, <a href="http://cerfacs.fr/wp-content/uploads/2015/10/Report_WHamri.pdf" target="_blank">Evaluation of the JAGUAR solver</a>, first-year Master's internship, ENSEEIHT and CERFACS, 2015.<br /></p></li>
 
-                                <li><p class="text-justify">G. Marait, <a href="http://cerfacs.fr/wp-content/uploads/2015/09/marait.pdf" target="_blank">Performances du code de mécanique des fluides JAGUAR sur CPU et accélérateur</a>, Bordeaux INP ENSEIRB MATMECA and CERFACS, 2015 (in French).<br /></p></li>
+                                <li><p class="text-justify">G. Marait, <a href="http://cerfacs.fr/wp-content/uploads/2015/09/marait.pdf" target="_blank">Performances du code de mécanique des fluides JAGUAR sur CPU et accélérateur</a>, Bordeaux INP ENSEIRB-MATMECA and CERFACS, 2015 (in French).<br /></p></li>
 
-                                <li><p class="text-justify">A. Cassagne, G. Puigt and J-F. Boussuge, <a href="http://www.cerfacs.fr/~cfdbib/repository/TR_CFD_15_9.pdf" target="_blank">High-order Method for a New Generation of Large Eddy Simulation</a>, joint PRACE project report from CERFACS (Toulouse) and Cines (Montpellier), 2015.<br /></p></li>
+                                <li><p class="text-justify">A. Cassagne, G. Puigt and J-F. Boussuge, <a href="http://www.cerfacs.fr/~cfdbib/repository/TR_CFD_15_9.pdf" target="_blank">High-order Method for a New Generation of Large Eddy Simulation</a>, joint PRACE project report from CERFACS (Toulouse) and CINES (Montpellier), 2015.<br /></p></li>
 
-                                <li><p class="text-justify">D. De Oliveria Amorim, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_15_6.pdf" target="_blank">Unsteady simulations with a high-order CFD code</a>, Master 1 report, ISAE/ENSMA and CERFACS, 2015<br /></p></li>
+                                <li><p class="text-justify">D. De Oliveira Amorim, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_15_6.pdf" target="_blank">Unsteady simulations with a high-order CFD code</a>, first-year Master's report, ISAE-ENSMA and CERFACS, 2015.<br /></p></li>
 
-                                <li><p class="text-justify">M. Lemesle, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_14_62.pdf" target="_blank">Analysis of several extensions for the spectral difference method to handle discontinuity</a>, MSc in Applied Mathematics, Université de Nantes and CERFACS, 2014<br /></p></li>
+                                <li><p class="text-justify">M. Lemesle, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_14_62.pdf" target="_blank">Analysis of several extensions for the spectral difference method to handle discontinuities</a>, MSc in Applied Mathematics, Université de Nantes and CERFACS, 2014.<br /></p></li>
 
-                                <li><p class="text-justify">A. Cassagne, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_14_5.pdf" target="_blank">Implémentation multi GPU de la méthode Spectral Differences pour un code de CFD</a>, EPSI Bordeaux and CERFACS, 2014 (in French)<br /></p></li>
+                                <li><p class="text-justify">A. Cassagne, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_14_5.pdf" target="_blank">Implémentation multi-GPU de la méthode Spectral Differences pour un code de CFD</a>, EPSI Bordeaux and CERFACS, 2014 (in French).<br /></p></li>
 
-                                <li><p class="text-justify">I. Marter, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_13_46.pdf" target="_blank">Handling different h and p refinements in the framework of spectral difference method</a>, MSc in Applied Mathematics, Université Pau et Pays de l'Adour and CERFACS, 2013<br /></p></li>
+                                <li><p class="text-justify">I. Marter, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_13_46.pdf" target="_blank">Handling different h and p refinements in the framework of spectral difference method</a>, MSc in Applied Mathematics, Université de Pau et des Pays de l'Adour and CERFACS, 2013.<br /></p></li>
 
-                                <li><p class="text-justify">M. Kuzmin, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_12_57.pdf" target="_blank"> Spectral difference method for the Euler equations on unstructured grids</a>, MSc ISAE SupAero and CERFACS, 2012<br /></p></li>
+                                <li><p class="text-justify">M. Kuzmin, <a href="http://www.cerfacs.fr/~cfdbib/repository/WN_CFD_12_57.pdf" target="_blank">Spectral difference method for the Euler equations on unstructured grids</a>, MSc thesis, ISAE-SUPAERO and CERFACS, 2012.<br /></p></li>
 
                             </ul>
                         </div>
@@ -140,8 +140,7 @@
 
                     <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Contributors</p></span></h4>
                         <div class="col-md-12">
-                            N. Villedieu (former post-doc), R. Fiévet (former post-doc), J. I. Cardesa (former post-doc at IMFT, now at ONERA), A. Veilleux (former Ph.D. student), P. Van Maris, J. Vanharen (former Ph.D. student), H. Deniau (ONERA), G. Puigt (CERFACS then ONERA), J-F. Boussuge (CERFACS), A. De Brauer (former post-doc at CERFACS)...<br />
-                            </ul>
+                            N. Villedieu (former post-doc), R. Fiévet (former post-doc), J. I. Cardesa (former post-doc at IMFT, now at ONERA), A. Veilleux (former Ph.D. student), P. Van Maris (former MSc student), J. Vanharen (former Ph.D. student), H. Deniau (ONERA), G. Puigt (CERFACS then ONERA), J-F. Boussuge (CERFACS), A. De Brauer (former post-doc at CERFACS)...<br />
                         </div>
                     </p>
 

@@ -9,12 +9,12 @@
                                     Guillaume Puigt, 
                                     ONERA,
                                     Computational Fluid Dynamics, CFD,
-                                    Finite Volume, Finite Element, SPectral method, 
+                                    Finite Volume, Finite Element, Spectral method, 
                                     turbulence, RANS, LES, DNS, 
                                     convection,
                                     diffusion,
                                     reacting flow,
-                                    mesh adaptation, INRIA, Gamma" />
+                                    mesh adaptation, Inria, Gamma" />
         <title>Guillaume Puigt - Professional Homepage</title>
 
         <!-- Favicon-->
@@ -55,8 +55,8 @@
         <section class="py-5">
             <div class="container my-auto">
                 <div class="row justify-content-start">
-                    My objective is to develop and enhance tools to use for industrial problems. These tools can be numerical schemes, methods, or procedures. 
-                    The most important activities are summarized hereafter.
+                    My objective is to develop and enhance tools for industrial problems. These tools can be numerical schemes, methods, or procedures. 
+                    The most important activities are summarized below.
 
                     <div class="row">
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Finite Volume discretization</p></span></h4>
@@ -64,16 +64,16 @@
                             <div class="text-justify">
 
 
-                            Even if the Finite Volume method has been developed for more than 20 years and is routinely applied in the industry, it still has some flaws. Indeed, the FV method is well known in the context of structured grids, but its use for unstructured grids still presents defaults and needs additional effort. Switching to unstructured grids is an industrial prerequisite.<br />
+                            Even if the Finite Volume method has been developed for more than 20 years and is routinely applied in industry, it still has some flaws. Indeed, the FV method is well known in the context of structured grids, but its use for unstructured grids still has shortcomings and needs additional effort. Switching to unstructured grids is an industrial prerequisite.<br />
 
 
                             There are today two main approaches for unstructured grids:
                             <ul>
-                                <li>The cell-centered finite volume method considers the mesh elements as control volumes. People generally consider multi-element shape meshes, and also polyhedra. This approach is generally preferred in the industry since it is the natural extension of the standard structured approach. Prisms are adequate for capturing the normal variation of quantities inside the boundary layer, where solutions and gradients must be estimated accurately.</li>
-                                <li>Using a dedicated approach, the node-centred finite volume method builds the control volume around mesh nodes. The control volume then defines a dual mesh. The main advantage of the procedure lies in mesh adaptation. The relation between dual cells and mesh nodes enables us to compute the mesh adaptation sensor "at mesh node".</li>
+                                <li>The cell-centered finite volume method considers the mesh elements as control volumes. Mixed-element meshes, including polyhedra, are generally used. This approach is generally preferred in industry since it is the natural extension of the standard structured approach. Prisms are adequate for capturing the normal variation of quantities inside the boundary layer, where solutions and gradients must be estimated accurately.</li>
+                                <li>The node-centered finite volume method builds control volumes around mesh nodes. These control volumes define a dual mesh. The main advantage of the procedure lies in mesh adaptation. The relation between dual cells and mesh nodes enables us to compute the mesh adaptation sensor "at mesh nodes".</li>
                             </ul>
-                            I am working on cell-centered schemes for defining gradients and successive derivatives. The least-square formulation requires an extended stencil and a high computational cost. A reduced stencil can lead to a bad condition number. But the schemes are mandatory for the MUSCL reconstruction or for the diffusion terms. Regarding the node-centred formulation, the goal is to extend the schemes to multi-physics, including multi-species reacting flows, aerothermodynamics, and plasmas. Of course, the goal is to apply the node-centred method to mesh adaptation.<br />
-                            <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> G. Barreau (ONERA/DPHY), F. Pechereau (ONERA/DPHY), F. Tholin (ONERA/DPHY), J. Vanharen (Inria), B. Maugars (DAAA/CLEF), C. Content (DAAA/CLEF), A. Loseille (INRIA/Gamma), F. Alauzet (INRIA/Gamma), D. Zuzio (DMPE/MH), J-L. Estiveleses (DMPE/MH), and engineers at Safran Tech. </p>
+                            I am working on cell-centered schemes for defining gradients and higher-order derivatives. The least-squares formulation requires an extended stencil and has a high computational cost. A reduced stencil can lead to poor conditioning. However, such schemes are mandatory for the MUSCL reconstruction or for the diffusion terms. Regarding the node-centered formulation, the goal is to extend the schemes to multi-physics, including multi-species reacting flows, aerothermodynamics, and plasmas. Ultimately, the goal is to apply the node-centered method to mesh adaptation.<br />
+                            <p class="text-justify"><span style="font-style: italic;">Cooperation:</span> G. Barreau (ONERA/DPHY), F. Pechereau (ONERA/DPHY), F. Tholin (ONERA/DPHY), J. Vanharen (Inria), B. Maugars (DAAA/CLEF), C. Content (DAAA/CLEF), A. Loseille (Inria/Gamma), F. Alauzet (Inria/Gamma), D. Zuzio (DMPE/MH), J-L. Estivalezes (DMPE/MH), and engineers at Safran Tech. </p>
                             </div>
                         </p>
 
@@ -81,13 +81,13 @@
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Mesh adaptation for multi-physics</p></span></h4>
 
                             <div class="text-justify">
-                            For steady flow, mesh adaptation is a way to converge the solution and mesh discretization together in a full computational loop. The proof of the procedure/concept follows more than 20 years of research at Inria (Gamma Team), including theoretical results and demonstrations. The GammaO team involves researchers from Gamma (Inria) and ONERA and focuses on the transfer of the mesh adaptation technology to multi-physics:
+                            For steady flows, mesh adaptation is a way to converge the solution and mesh discretization together in a full computational loop. The proof of concept builds on more than 20 years of research at Inria (Gamma Team), including theoretical results and demonstrations. The GammaO team involves researchers from Gamma (Inria) and ONERA and focuses on the transfer of the mesh adaptation technology to multi-physics:
                             <ul>
-                                <li>aerodynamics, including turbomachinery flow<li>
-                                <li>plasmas, including arc lightning</li>
-                                <li>reentry, including wall heat flux on anisotropic tetrahedron grids</li>
+                                <li>aerodynamics, including turbomachinery flows</li>
+                                <li>plasmas, including lightning arcs</li>
+                                <li>reentry, including wall heat flux on anisotropic tetrahedral grids</li>
                             </ul>
-                            <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> G. Barreau (ONERA/DPHY), F. Pechereau (ONERA/DPHY), F. Tholin (ONERA/DPHY), J. Vanharen (Inria), B. Maugars (DAAA/CLEF), C. Content (DAAA/CLEF), A. Loseille (INRIA/Gamma), F. Alauzet (INRIA/Gamma), C. Tarsia-Morisco (Inria), and engineers at Safran Tech.</p>
+                            <p class="text-justify"><span style="font-style: italic;">Cooperation:</span> G. Barreau (ONERA/DPHY), F. Pechereau (ONERA/DPHY), F. Tholin (ONERA/DPHY), J. Vanharen (Inria), B. Maugars (DAAA/CLEF), C. Content (DAAA/CLEF), A. Loseille (Inria/Gamma), F. Alauzet (Inria/Gamma), C. Tarsia-Morisco (Inria), and engineers at Safran Tech.</p>
                             </div>
                         </p>
 
@@ -96,27 +96,27 @@
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">High-order spectral discontinuous methods on unstructured grids</p></span></h4>
 
                             <div class="col-md-12">
-                                MMany recent works focus on new numerical techniques based on the polynomial representation of quantities at each mesh element and on special treatment for data discontinuity at cell interfaces. Among them, a famous approach is the Discontinuous Galerkin approach. At Cerfacs, a new solver based on the Spectral Difference method was initiated, and the project is shared today between Cerfacs and ONERA. This solver is called <a href="http://gpuigt.free.fr/jaguar.html" target="_blank"><span style="font-style: italic;">JAGUAR</span></a>.<br />
+                                Many recent works focus on new numerical techniques based on the polynomial representation of quantities at each mesh element and on special treatment of data discontinuities at cell interfaces. Among them, the best known is the Discontinuous Galerkin method. At CERFACS, a new solver based on the Spectral Difference method was initiated, and the project is shared today between CERFACS and ONERA. This solver is called <a href="jaguar.html" target="_blank"><span style="font-style: italic;">JAGUAR</span></a>.<br />
 
                                 <ul>
-                                    <li>After many efforts dedicated to High-Performance Computing (HPC), especially for LES, we are currently working on four axes: 1. the extension of the Spectral Difference Method to handle multielement meshes, 2. the development of a shock-capturing scheme, 3. the extension to multi-species reacting flows, and 4. the definition of an efficient implicit time integration technique.<br />
-                                    <span style="font-style: italic;"><g>Cooperation:</g></span>  Many colleagues from ONERA and CERFACS. Strong cooperation with A. Veilleux (former PhD Student, ONERA and CERFACS), R. Fievet (Former post-doc, RTRA and ONERA), H. Deniau (ONERA), A. Genot (ONERA), J-M. Senoner (ONERA), P. Seize (ONERA and DGA), J-F. Boussuge (CERFACS), G. Daviller (CERFACS), M. Montagnac (CERFACS).<br /><br></li>
+                                    <li>After significant effort devoted to High-Performance Computing (HPC), especially for LES, we are currently working on four axes: 1. the extension of the Spectral Difference method to handle multi-element meshes, 2. the development of a shock-capturing scheme, 3. the extension to multi-species reacting flows, and 4. the definition of an efficient implicit time integration technique.<br />
+                                    <span style="font-style: italic;">Cooperation:</span>  Many colleagues from ONERA and CERFACS. Strong cooperation with A. Veilleux (former Ph.D. student, ONERA and CERFACS), R. Fievet (former post-doc, RTRA and ONERA), H. Deniau (ONERA), A. Genot (ONERA), J-M. Senoner (ONERA), P. Seize (ONERA and DGA), J-F. Boussuge (CERFACS), G. Daviller (CERFACS), and M. Montagnac (CERFACS).<br /><br></li>
 
-                                    <li>Another activity is performed in the framework of the LMA2S lab. It deals with transferring the spectral difference method for the Navier-Stokes equations to Maxwell's equation.<br />
-                                    <span style="font-style: italic;"><g>Cooperation:</g></span> many colleagues from ONERA. Joint work with X. Ferrieres (ONERA), S. Pernet (ONERA), P. Cantin (INSA), and V. Ritzenthaler (PhD Student, ONERA and INSA).<br ></li>
+                                    <li>Another activity, carried out within the LMA2S lab, deals with transferring the spectral difference method from the Navier-Stokes equations to Maxwell's equations.<br />
+                                    <span style="font-style: italic;">Cooperation:</span> many colleagues from ONERA. Joint work with X. Ferrières (ONERA), S. Pernet (ONERA), P. Cantin (INSA), and V. Ritzenthaler (Ph.D. student, ONERA and INSA).<br ></li>
                                 </ul>
                             </div>
                         </p>
 
                         <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Time integration techniques</p></span></h4>
                             <div class="col-md-12">
-                                The time integration procedure is still one bottleneck of many physics. I was involved for a long time in the time spectral methods (Time Spectral method and Harmonic Balance method) for periodic and aperiodic flows. Today, I focus my research on methods for RANS and unsteady solutions (LES). 
+                                The time integration procedure remains a bottleneck in many multi-physics simulations. For a long time, I was involved in time spectral methods (Time Spectral method and Harmonic Balance method) for periodic and aperiodic flows. Today, I focus my research on methods for RANS and unsteady solutions (LES). 
                                 <ul>
-                                    <li>A still active research area concerns the definition of an efficient algorithm for the linearized treatment of the implicit system of equations in the framework of multi-physics simulations. Indeed, even if the definition of a linear solver to invert the linear system from the time discretization of the nonlinear initial problem is well-known, the standard definition of the matrix to invert deals with human experience to cancel or to model terms. <br />
-                                    <span style="font-style: italic;"><g>Cooperation:</g></span>  P. Seize (PhD Student, ONERA) and L. Matuszweski (ONERA).<br /><br>
+                                    <li>A still active research area concerns the definition of an efficient algorithm for the linearized treatment of the implicit system of equations in the framework of multi-physics simulations. Indeed, even if the definition of a linear solver to invert the linear system arising from the time discretization of the nonlinear initial problem is well known, the standard definition of the matrix to invert relies on human expertise to neglect or model terms. <br />
+                                    <span style="font-style: italic;">Cooperation:</span>  P. Seize (former Ph.D. student, ONERA) and L. Matuszewski (ONERA).<br /><br>
                                     </li>
-                                    <li>Another active research area concerns the development of time integration techniques for large time steps and dedicated to high-order spectral discontinuous methods.  <br />
-                                    <span style="font-style: italic;"><g>Cooperation:</g></span>  P. Seize (PhD Student, ONERA) and L. Matuszweski (ONERA).
+                                    <li>Another active research area concerns the development of time integration techniques suited to large time steps and dedicated to high-order spectral discontinuous methods.  <br />
+                                    <span style="font-style: italic;">Cooperation:</span>  P. Seize (former Ph.D. student, ONERA) and L. Matuszewski (ONERA).
                                     </li>
                                 </ul>
                             </div>
@@ -127,48 +127,49 @@
                                 <ul>
                                     <li><p class="text-justify">V. Golliet, 2024-2027, Extension de la procédure de l'adaptation de maillage aux écoulements réactifs de la rentrée atmosphérique, advised by myself and co-advised by F. Alauzet.</p></li>
 
-                                    <li><p class="text-justify">Y. Gorschka, 2022-2025, Développement d'une approche volume fini node-centred pour l'adaptation de maillage anisotrope dans le solveur de CFD SoNICS, advised by myself, with involvement of B. Maugars (ONERA-DAAA), C. Content (ONERA-DAAA) and engineers from Safran Tech.</p></li>
+                                    <li><p class="text-justify">Y. Gorschka, 2022-2025, Développement d'une approche volume fini node-centred pour l'adaptation de maillage anisotrope dans le solveur de CFD SoNICS, advised by myself, with the involvement of B. Maugars (ONERA-DAAA), C. Content (ONERA-DAAA) and engineers from Safran Tech.</p></li>
 
-                                    <li><p class="text-justify">V. Ritzenthaler, 2021-2024, Couplage des différences spectrales avec une approche mimétique pour la prise en compte d'irrégularités de maillage dans la résolution des équations de Maxwell instationnaires, advised by X. Ferrieres (ONERA-DEMR) and P. Cantin (INSA), with involvement of S. Pernet (ONERA-DTIS) and myself.</p></li>
+                                    <li><p class="text-justify">V. Ritzenthaler, 2021-2024, Couplage des différences spectrales avec une approche mimétique pour la prise en compte d'irrégularités de maillage dans la résolution des équations de Maxwell instationnaires, advised by X. Ferrières (ONERA-DEMR) and P. Cantin (INSA), with the involvement of S. Pernet (ONERA-DTIS) and myself.</p></li>
 
-                                    <li><p class="text-justify">G. Barreau, 2021-2024, Modélisation des arcs continus : application à la foudre et à la chambre à arc de F4, advised by F. Alauzet (INRIA GAMMA) and myself, co-advised by F. Pechereau (ONERA-DPHY).</p></li>
+                                    <li><p class="text-justify">G. Barreau, 2021-2024, Modélisation des arcs continus : application à la foudre et à la chambre à arc de F4, advised by F. Alauzet (Inria Gamma) and myself, co-advised by F. Pechereau (ONERA-DPHY).</p></li>
 
-                                    <li><p class="text-justify">P. Seize, Méthodologies permettant l’obtention efficace de solutions multi-physiques stationnaires pour des applications en énergétique, funded by DGA and ONERA, advised by myself and co-advised by L. Matuszweski (ONERA-DMPE), 2023.</p></li>
+                                    <li><p class="text-justify">P. Seize, 2023, Méthodologies permettant l’obtention efficace de solutions multi-physiques stationnaires pour des applications en énergétique, funded by DGA and ONERA, advised by myself and co-advised by L. Matuszewski (ONERA-DMPE).</p></li>
 
-                                    <li><p class="text-justify">A. Veilleux, Extension of the Spectral Difference method to simplex cells and hybrid grids, funded by ONERA and CERFACS, advised by myself and co-advised by G. Daviller (CERFACS), with involvement of H. Deniau, 2021.</p></li>
+                                    <li><p class="text-justify">A. Veilleux, 2021, Extension of the Spectral Difference method to simplex cells and hybrid grids, funded by ONERA and CERFACS, advised by myself and co-advised by G. Daviller (CERFACS), with the involvement of H. Deniau.</p></li>
 
-                                    <li><p class="text-justify">L. Muscat, Coupling of time integration schemes for compressible unsteady flows, funded by ArianeGroup, advised by myself and co-advised by M. Montagnac (CERFACS), 2019.</p></li>
+                                    <li><p class="text-justify">L. Muscat, 2019, Coupling of time integration schemes for compressible unsteady flows, funded by ArianeGroup, advised by myself and co-advised by M. Montagnac (CERFACS).</p></li>
 
-                                    <li><p class="text-justify">C. Coreixas, High-order extension of the recursive regularized lattice Boltzmann method, funded by CERFACS' contract, advised by Jean-François Boussuge (CERFACS) and myself, 2018.</p></li>
+                                    <li><p class="text-justify">C. Coreixas, 2018, High-order extension of the recursive regularized lattice Boltzmann method, funded by a CERFACS contract, advised by J-F. Boussuge (CERFACS) and myself.</p></li>
 
-                                    <li><p class="text-justify">J. Vanharen, High-order numerical methods for unsteady flows around complex geometries, funding by Airbus, 2017.</p></li>
+                                    <li><p class="text-justify">J. Vanharen, 2017, High-order numerical methods for unsteady flows around complex geometries, funded by Airbus.</p></li>
 
-                                    <li><p class="text-justify">C. Pérez Arroyo, Large eddy simulations of a dual stream jet with shock-cells and noise emission analysis, funded by Aerotranet-2 Marie-Curie fellow, advised by Prof. C. Airiau (IMFT) and co-advised by myself, 2016.</p></li>
+                                    <li><p class="text-justify">C. Pérez Arroyo, 2016, Large eddy simulations of a dual stream jet with shock cells and noise emission analysis, funded by an AeroTraNet-2 Marie Curie fellowship, advised by Prof. C. Airiau (IMFT) and co-advised by myself.</p></li>
 
-                                    <li><p class="text-justify">P. Cayot, Schémas numériques d'ordre élevé pour la simulation des écoulements turbulents sur maillage structuré et non structuré, funded by SCNEMA and CIRT, advised by myself, 2016.</p></li>
+                                    <li><p class="text-justify">P. Cayot, 2016, Schémas numériques d'ordre élevé pour la simulation des écoulements turbulents sur maillage structuré et non structuré, funded by SNECMA and CIRT, advised by myself.</p></li>
                                 </ul>
                             </div>
                         </p>
 
-                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Post-docs and engineer</p></span></h4>
+                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Post-docs and engineers</p></span></h4>
                             <div class="col-md-12">
                                 <ul>
-                                    <li><p class="text-justify">G. Dufour (2006-2008), CERFACS, on harmonic balance technique for unsteady solution on deformable grids, now at ISAE-SupAero</p></li>
-                                    <li><p class="text-justify">G. Joubert (2007-2008), CERFACS, on research programs, now at Aero-Nautic Services & Engineering</p></li>
-                                    <li><p class="text-justify">N. Villedieu (2013-2015), CERFACS, on the development of JAGUAR, now at CONDOR SAS</p></li>
-                                    <li><p class="text-justify">S. Bidadi (2015-2016), CERFACS, on aeroacoustic simulations with shocks, now at the National Renewable Energy Laboratory at the University of Alabama</p></li>
-                                    <li><p class="text-justify">A. Balan (2015-2017), CERFACS, on the development of JAGUAR, now at the Department of Aerospace Engineering at the Indian Institute of Technology, Bombay</p></li>
+                                    <li><p class="text-justify">G. Dufour (2006-2008), CERFACS, on the harmonic balance technique for unsteady solutions on deformable grids</p></li>
+                                    <li><p class="text-justify">G. Joubert (2007-2008), CERFACS, on research programs</p></li>
+                                    <li><p class="text-justify">N. Villedieu (2013-2015), CERFACS, on the development of JAGUAR</p></li>
+                                    <li><p class="text-justify">S. Bidadi (2015-2016), CERFACS, on aeroacoustic simulations with shocks</p></li>
+                                    <li><p class="text-justify">A. Balan (2015-2017), CERFACS, on the development of JAGUAR</p></li>
+                                    <li><p class="text-justify">B. Sauvage (2026-), ONERA, on convection and diffusion schemes for anisotropic simplices</p></li>
                                 </ul>
                             </div>
                         </p>
 
-                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">PhD defense committee</p></span></h4>
+                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Ph.D. defense committees</p></span></h4>
                             <div class="col-md-12">
                                 <ul>
                                     <li>E. D'Ayer, Amélioration des modèles de couche limite sur paroi rugueuse à l'aide de simulations numériques d'ordre élevé utilisant la technique de conditions aux limites immergées, 2026. Member.</li>
                                     <li>R. Simo Tamou, Développement de méthodes d’ordre élevé dans un solveur cartésien / AMR pour la modélisation de la combustion, 2025. President.</li>
                                     <li>F. Miralles, Simulation aérodynamique et aéroacoustique d’écoulements massivement décollés par des modèles de turbulence hybrides et de transition, 2023. Reviewer.</li>
-                                    <li>T. Jeanneau, Etude et validation d’une approche cinétique couplée pour la modélisation du transfert multimodal et multi-échelle de chaleur en milieu hétérogène, 2023. Reviewer.</li>
+                                    <li>T. Jeanneau, Étude et validation d’une approche cinétique couplée pour la modélisation du transfert multimodal et multi-échelle de chaleur en milieu hétérogène, 2023. Reviewer.</li>
                                     <li>L. Tallois, Simulation numérique de l'ablation liquide, 2023. Member.</li>
                                     <li>S. Courtiaud, Étude et simulation de la postcombustion turbulente des explosifs homogènes sous-oxygénés, 2017. Member.</li>
                                     <li>F. Blachère, Schémas numériques d'ordre élevé et préservant l'asymptotique pour l'hydrodynamique radiative, 2016. Member.</li>
@@ -184,8 +185,8 @@
                                     <li>Journal of Scientific Computing</li>
                                     <li>AIAA Journal </li>
                                     <li>International Journal of Computational Fluid Dynamics </li>
-                                    <li>Flow, Turbulence, and Combustion </li>
-                                    <li>Computers and Fluids </li>
+                                    <li>Flow, Turbulence and Combustion </li>
+                                    <li>Computers & Fluids </li>
                                     <li>ASME Turbo Expo conference</li>
                                     <li>Agence Nationale de la Recherche</li>
                                     <li>PRACE computational resources</li>
