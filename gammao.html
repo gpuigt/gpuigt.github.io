@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+        <meta name="description" content="" />
+        <meta name="author" content="Guillaume Puigt" />
+        <meta name="keywords" content="Puigt,
+                                    Guillaume Puigt, 
+                                    ONERA,
+                                    Computational Fluid Dynamics, CFD,
+                                    Finite Volume, Finite Element, SPectral method, 
+                                    turbulence, RANS, LES, DNS, 
+                                    convection,
+                                    diffusion,
+                                    reacting flow,
+                                    mesh adaptation, INRIA, Gamma" />
+        <title>Guillaume Puigt - Professional Homepage</title>
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <section class="py-5">
+            <div class="container my-auto">
+                <div class="row justify-content-start">
+                    <div class="col-lg-1">
+                        <nav class="navbar navbar-expand-sl navbar-light bg-gui">
+                            <div class="container">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+                                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="gammao.html">GammaO</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="jaguar.html">JAGUAR</a></li>
+                                </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-lg-8">
+                        <h1> GammaO joint team between Inria and ONERA</h1><br />
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container my-auto">
+                <div class="row justify-content-start">
+                    In today's time, building the mesh is still the major bottleneck of industrial simulations. <br />
+                    <ul>
+                        
+                    </ul>
+                    <li>Structured meshes were the preferred technique to align mesh lines and physics, especially on the boundary layer. However, the time needed to define the mesh can be considerable, and the procedure is not dedicated to very complex geometry. Of course, the mesh quality depends strongly on the capability to anticipate physics and on the way hexahedral blocks map the computational domain. <br />
+                    </li>
+                    <ul>
+                        
+                    </ul>
+                    <li>Unstructured grids generally contain elements with privileged directions (hexahedrons and prisms) near the wall, with refinement in the direction normal to the wall. Tetrahedrons are located around a complex geometry or far from walls, while pyramids can be introduced to link hexahedrons and tetrahedrons. The hybrid grids required expertise to force the mesh generator to cope with one’s constraints. The final mesh anticipates physics; any mistake requires a full mesh generation. <br />
+                    </li>
+                    <ul>
+                        
+                    </ul>
+                    Reading those lines convinces us that the mesh generation process is the most difficult aspect of simulations since the accuracy and the capability to capture physics depend on it. The human experience remains too present, avoiding any automaticity in the process. <br />
+                    <ul>
+                        
+                    </ul>
+                    GammaO is a joint team between ONERA and Inria dedicated to the mesh adaptation procedure using simplexes (triangles in 2D and tetrahedrons in 3D). The idea is to start from a coarse grid and to converge at the same time the mesh and the solution. To do so, it is mandatory to introduce a remesher that can adapt the mesh to physics using a sensor. One strength of GammaO lies in the expertise of its researchers on the remesher itself, but also the whole computational loop, including CFD, interpolation, error estimate, and adjoint problem. <br />
+                    <ul>
+                        
+                    </ul>
+                    GammaO is based on strong cooperation between the teams, with the help of their companies. Several topics are addressed.</br>
+
+
+                   <div class="row">
+                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Mixed-Volume Element discretization</p></span></h4>
+
+                            <div class="text-justify">
+                            Anisotropic meshes require robust schemes, especially when the element’s anisotropy can be about one million. Moreover, it is interesting to define the degrees of freedom and the sensors for mesh adaptation at the same location. In practice, both are at mesh nodes.  <br />
+                            <ul>
+                        
+                            </ul>
+                            The finite volume formulation requires the definition of the control volumes around mesh nodes, leading to node-centred discretisation. For convection, our robust scheme was proposed by A. Dervieux (and coauthors) under the naming V4 scheme. It uses a dedicated MUSCL reconstruction with a combination of upwind and centred gradients and a dedicated slope limiter. Diffusion terms are computed using the Finite Element approximation using the gradients of the shape functions. Source terms require gradients at mesh nodes estimated using Clément’s scheme. The full discretisation is called the mixed-volume element approach. <br />
+
+                            <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> G. Barreau (ONERA/DPHY), Y. Gorschka (Safran Tech), F. Pechereau (ONERA/DPHY), F. Tholin (ONERA/DPHY), C. Tarsia-Morisco (Inria/GammaO),  F. Alauzet (Inria/GammaO), J. Vanharen (Inria/GammaO), A. Remigi (Safran Tech), B. Maugars (DAAA/CLEF), C. Content (DAAA/CLEF). </p>
+                        </p>
+
+                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">Error estimate</p></span></h4>
+
+                            <div class="text-justify">
+                            The error estimate is one root of the process. It should be based on unknowns, leading to the feature-based adaptation. Or it should require the solutions of direct and adjoint problems, leading to the goal-oriented procedure. We work on both approaches. </br>
+                            
+                            <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> V. Golliet (ONERA/DMPE), F. Pechereau (ONERA/DPHY), 
+                            F. Alauzet (Inria/GammaO), A. Remigi (Safran Tech) and PhD students from Inria.</p>
+                            </div>
+                        </p>
+
+                        <p class="lead"><h4><span style="font-style: italic;"><p style="color:rgba(15,60,240,1.0);">New applications</p></span></h4>
+
+                            <div class="text-justify">
+                            One of my objectives for GammaO is to promote the technology for multiphysics (reentry, arc lightning with ONERA/DPHY or turbomachinery with Safran Tech and ONERA/DAAA). Reentry is a class of flows never tested before. Hypersonic flows are characterised by strong 3D shocks, whose location depends on inflow conditions. In addition, capturing the boundary layer, especially the wall heat flux, is the main objective since heat is transferred to the wall. Our strategy is based on simplexes (triangles and tetrahedrons) in the boundary layer, which contradicts the literature for which prisms or hexahedrons must be preferred. The strength of our method is the capability to add nodes exactly where they are needed and to coarsen the mesh elsewhere. A strong mathematical environment drives everything, and the whole theoretical background explains the quality of our results.</br>
+                            
+                            <p class="text-justify"><span style="font-style: italic;"><g>Cooperation:</span></g> V. Golliet (ONERA/DMPE), F. Pechereau (ONERA/DPHY), 
+                            F. Alauzet (Inria/GammaO), A. Remigi (Safran Tech) and PhD students from Inria.</p>
+                            </div>
+                        </p>
+
+                    </div>
+                    <br />
+                    <h6>Designed and built using <a target="_blank" href="https://getbootstrap.com/">bootstrap</a><br />&copy; Copyright 2014-2026 Guillaume Puigt </h6>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
